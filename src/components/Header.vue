@@ -6,6 +6,19 @@
       <i v-else class="el-icon-s-unfold"></i>
     </div>
     <div class="logo">监控系统</div>
+    <div class="header-right">
+      <div class="header-user-con">
+        <!--消息中心-->
+        <div class="btn-bell">
+          <el-tooltip effect="dark" :content="message?`有${message}条未读消息`:`消息中心`" placement="bottom">
+            <router-link to="/tabs">
+              <i class="btn-icon-bell"></i>
+            </router-link>
+          </el-tooltip>
+          <span class="btn-bell-badge" v-if="message"></span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
