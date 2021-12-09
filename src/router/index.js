@@ -8,8 +8,20 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      redirect: '/dashboard'
+    },
+    {
+      path: '/',
+      name: 'Home',
+      component: []
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      meta: {
+        title: '登陆'
+      },
+      component: () => import(/* webpackChunkName: "login" */ )
     }
   ]
 })
